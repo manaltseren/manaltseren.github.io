@@ -1,48 +1,96 @@
 body {
     font-family: 'Raleway', sans-serif;
-    background-color: #1e1e1e;
-    color: #a4a3b6;
+    // background-color: #232135;
+    // color: #a4a3b6;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
     font-weight: 400;
 }
 
+#bg {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
 a {
-    color:#efefef;
     text-decoration: none;
 
     &:hover{
-        color:#fff;
     }
 }
 
 
-.contact {
-    max-width: 320px;
+.content {
+    max-width: 256px;
     width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    img {
-        width: 150px;
+    padding: 30px;
+    background: #19191fc9;
+    border-radius: 30px;
+    box-shadow: 1px 1px 20px #00000021;
+
+    img.profile {
+        width: 120px;
         border-radius: 100%;
         border: solid 10px #ffffff0d;
     }
     h1 {
         color:#fff;
-        margin: 10px 0;
+        margin: 10px 0 5px;
         font-weight: 600;
+        font-size: 24px;
     }
 
     .sub-title {
         margin-bottom: 20px;
-        color: #d86060;
+        font-size: 14px;
+        color: #c46fff;
     }
 
     .info {
-        span {
-            margin: 0 10px;
-            color:#fff;
+
+        .contact {
+            display: flex;
+            justify-content: center;
+            a {
+                color: #fff;
+                font-size: 28px;
+                width: 30px;
+                height: 30px;
+                /* display: flex; */
+                text-align: center;
+                /* border: solid 1px #fff; */
+                margin: 3px;
+                padding: 5px;
+                border-radius: 14px;
+                background: #00000052;
+
+                &:hover {
+                    background: #00000080;
+                }
+            }
+        }
+        .add-contact {
+            margin: 20px;
+            display: block;
+            background: #4edbec;
+            padding: 15px;
+            font-weight: 700;
+            border-radius: 13px;
+            color: #000;
+
+            &:hover {
+
+            }
         }
     }
 }
