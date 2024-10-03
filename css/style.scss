@@ -1,3 +1,7 @@
+@mixin transition($properties, $duration: 0.3s, $timing: ease-in-out) {
+    transition: $properties $duration $timing;
+}
+  
 body {
     font-family: 'Raleway', sans-serif;
     // background-color: #232135;
@@ -30,17 +34,28 @@ a {
 
 
 .content {
-    max-width: 256px;
+    max-width: 320px;
     width: 100%;
+    margin: 20px auto;
+}
+
+.content-fixed {
+    max-width: 320px;
+    width: 100%;
+    margin: 20px auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    padding: 30px;
-    background: #19191fc9;
-    border-radius: 30px;
-    box-shadow: 1px 1px 20px #00000021;
+
+    .main-card {
+        padding: 30px;
+        background: #19191fc9;
+        border-radius: 30px;
+        box-shadow: 1px 1px 20px #00000021;
+        margin-bottom: 10px;
+        text-align: center;
+    }
 
     .avatar {
         width: 120px;
@@ -106,6 +121,7 @@ a {
                 padding: 5px;
                 border-radius: 14px;
                 background: #00000052;
+                @include transition(all);
 
                 &:hover {
                     background: #00000080;
@@ -113,17 +129,156 @@ a {
             }
         }
         .add-contact {
-            margin: 20px;
+            margin: 20px 20px 0;
             display: block;
-            background: #4edbec;
+            background-color: #4edbec;
             padding: 15px;
             font-weight: 700;
             border-radius: 13px;
             color: #000;
+            @include transition(all);
 
             &:hover {
-
+                background-color: #b64bff;
+                color: #fff;
             }
         }
     }
+}
+
+
+.timeline {
+	margin: auto;
+	width: 100%;
+    
+}
+.timeline__arrow {
+	background-color: transparent;
+	border-radius: 0.25em;
+	cursor: pointer;
+	flex-shrink: 0;
+	margin-inline-end: 0.25em;
+	outline: transparent;
+	width: 2em;
+	height: 2em;
+	transition:
+		background-color calc(var(--trans-dur) / 2) linear,
+		color var(--trans-dur);
+	-webkit-appearance: none;
+	appearance: none;
+	-webkit-tap-highlight-color: transparent;
+}
+.timeline__arrow:focus-visible,
+.timeline__arrow:hover {
+	background-color: hsl(var(--hue),10%,50%,0.4);
+}
+.timeline__arrow-icon {
+	display: block;
+	pointer-events: none;
+	transform: rotate(-90deg);
+	transition: transform var(--trans-dur) var(--trans-timing);
+	width: 100%;
+	height: auto;
+}
+.timeline__date {
+	font-size: 0.833em;
+	color:rgba(255,255,255,.4);
+    margin-bottom: 5px;
+}
+.timeline__dot {
+	background-color: #4edbec;
+	border-radius: 50%;
+	display: inline-block;
+	flex-shrink: 0;
+	margin: 0.625em 0;
+	margin-inline-end: 1em;
+	position: relative;
+	width: 0.75em;
+	height: 0.75em;
+    box-shadow: 0 0 5px #4edbec;
+    @include transition(all);
+
+}
+.timeline__item {
+	position: relative;
+	padding-bottom:20px;
+
+    &:hover {
+        .timeline__title  {
+            color: #b64bff;
+        }
+        .timeline__dot{
+            background-color: #b64bff;
+            box-shadow: 0 0 15px #b64bff;
+        }
+    } 
+}
+.timeline__item:not(:last-child):before {
+	background-color: #0000006e;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 1em;
+	left: 5px;
+	width: 2px;
+	height: 100%;
+	transform: translateX(-50%);
+}
+[dir="rtl"] .timeline__arrow-icon {
+	transform: rotate(90deg);
+}
+[dir="rtl"] .timeline__item:not(:last-child):before {
+	right: 2.625em;
+	left: auto;
+	transform: translateX(50%);
+}
+.timeline__item-header {
+	display: flex;
+}
+.timeline__item-body {
+    overflow: hidden;
+    line-height: 1.5;
+	height: 0;
+}
+.timeline__item-body-content {
+    color: rgba(255,255,255,.65);
+    padding-top: 10px;
+    list-style: 1.5;
+	background-color: hsl(var(--hue),10%,50%,0.2);
+	transition:
+		opacity var(--trans-dur) var(--trans-timing),
+		visibility var(--trans-dur) steps(1,end);
+}
+.timeline__meta {
+	width: 100%;
+    padding: 20px 20px;
+    background: #19191fc9;
+    border-radius: 15px;
+    box-shadow: 1px 1px 20px #00000021;
+    color: #ffffffc2;
+}
+.timeline__title {
+	font-size: 16px;
+    font-weight: 600;
+	line-height: 1.333;
+    margin-bottom: 8px;
+    color: #4edbec;
+    cursor: pointer;
+    @include transition(all);
+}
+
+.timeline__company {
+
+}
+/* Expanded state */
+.timeline__item-body--expanded {
+	height: auto;
+}
+.timeline__item-body--expanded .timeline__item-body-content {
+	opacity: 1;
+	visibility: visible;
+	transition-delay: var(--trans-dur), 0s;
+}
+.timeline__arrow[aria-expanded="true"] .timeline__arrow-icon {
+	transform: rotate(0);
 }
