@@ -6,6 +6,11 @@ body {
   font-weight: 400;
 }
 
+img {
+  height: auto;
+  max-width: 100%;
+}
+
 #bg {
   height: 100vh;
   width: 100%;
@@ -31,10 +36,36 @@ a {
   border-radius: 30px;
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1294117647);
 }
-.content img.profile {
+.content .avatar {
   width: 120px;
+  height: 120px;
+  border: solid 7px rgba(255, 255, 255, 0.0509803922);
+  margin: 0 auto;
+  position: relative;
   border-radius: 100%;
-  border: solid 10px rgba(255, 255, 255, 0.0509803922);
+}
+.content .avatar img {
+  border-radius: 100%;
+}
+.content .avatar .text {
+  position: absolute;
+  top: -10px;
+  right: -40px;
+  background-color: rgba(78, 219, 236, 0.7882352941);
+  padding: 5px 8px;
+  font-weight: 600;
+  border-radius: 16px;
+  font-size: 12px;
+}
+.content .avatar .text:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: rgba(78, 219, 236, 0.5803921569);
+  position: absolute;
+  top: 20px;
+  left: -10px;
 }
 .content h1 {
   color: #fff;
