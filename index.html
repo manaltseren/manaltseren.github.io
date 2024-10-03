@@ -23,7 +23,7 @@
                 <a href="mailto:manaltseren@gmail.com" target="_blank" title="manaltseren@gmail.com"><i class="las la-envelope"></i></a>
                 <a href="tel:90911025" target="_blank" title="9091-1025"><i class="las la-mobile"></i></a>
                 <a href="https://www.linkedin.com/in/manaltseren-b-5883b214b/" target="_blank"> <i class="lab la-linkedin-in"></i></a>
-                <a href="https://facebook.com/gyalb44" target="_blank"><i class="lab la-facebook-f"></i></a> 
+                <a href="#" onclick="openFacebookLink()" target="_blank"><i class="lab la-facebook-f"></i></a> 
                 <a href="https://www.instagram.com/manal.dev/" target="_blank"> <i class="lab la-instagram"></i></a>
                 
                
@@ -52,8 +52,21 @@
         baseColor: 0x110606,
         blurFactor: 0.77,
         speed: 1.70
-        })
-        </script>
+        });
+
+        function openFacebookLink() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Check if the user is on a mobile device
+            if (/android|iphone|ipad|iPod/i.test(userAgent)) {
+                // If on mobile, use deep link
+                window.location.href = "fb://profile/4855017627861954";
+            } else {
+                // If on desktop, use the regular URL
+                window.open('https://www.facebook.com/gyalb44', '_blank');
+            }
+        }
+    </script>
     
 </body>
 </html>
