@@ -9,7 +9,7 @@ $breakpoint-desktop: 1024px;
   
 body {
     font-family: 'Raleway', sans-serif;
-    // background-color: #232135;
+    background: #0e0e12;
     // color: #a4a3b6;
     font-size: 14px;
     margin: 0;
@@ -77,14 +77,6 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    @media (max-width: $breakpoint-tablet) {
-        position: relative;
-        top: unset;
-        left: unset;
-        transform: none;
-    }
-
 
     .main-card {
         padding: 30px;

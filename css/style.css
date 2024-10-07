@@ -1,5 +1,6 @@
 body {
   font-family: "Raleway", sans-serif;
+  background: #0e0e12;
   font-size: 14px;
   margin: 0;
   padding: 0;
@@ -60,14 +61,6 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-@media (max-width: 768px) {
-  .content-fixed {
-    position: relative;
-    top: unset;
-    left: unset;
-    transform: none;
-  }
 }
 .content-fixed .main-card {
   padding: 30px;
