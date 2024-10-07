@@ -23,6 +23,29 @@ img {
 a {
   text-decoration: none;
 }
+.header {
+  background: rgba(25, 25, 31, 0.7882352941);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  padding: 0 5px;
+}
+.header a {
+  color: #fff;
+  font-weight: 600;
+  padding: 15px 10px;
+  display: inline-block;
+}
+.header a.active {
+  color: #4edbec;
+}
+.header a .profile {
+  width: 28px;
+  vertical-align: middle;
+  border-radius: 100%;
+  margin-right: 3px;
+  border: solid 3px rgba(78, 219, 236, 0.2117647059);
+}
+
 .content {
   max-width: 320px;
   width: 100%;
@@ -37,6 +60,14 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media (max-width: 768px) {
+  .content-fixed {
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: none;
+  }
 }
 .content-fixed .main-card {
   padding: 30px;
@@ -102,7 +133,7 @@ a {
   /* border: solid 1px #fff; */
   margin: 3px;
   padding: 5px;
-  border-radius: 14px;
+  border-radius: 15px;
   background: rgba(0, 0, 0, 0.3215686275);
   transition: all 0.3s ease-in-out;
 }
@@ -115,13 +146,51 @@ a {
   background-color: #4edbec;
   padding: 15px;
   font-weight: 700;
-  border-radius: 13px;
+  border-radius: 15px;
   color: #000;
   transition: all 0.3s ease-in-out;
 }
 .content-fixed .info .add-contact:hover {
   background-color: #b64bff;
   color: #fff;
+}
+
+.menu {
+  display: flex;
+  margin: 15px 0;
+  padding: 0 20px;
+  align-items: center;
+  font-weight: 600;
+}
+.menu a {
+  transition: all 0.3s ease-in-out;
+}
+.menu a.xp {
+  width: 46px;
+  height: 46px;
+  background: rgba(0, 0, 0, 0.33);
+  border-radius: 15px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 15px;
+}
+.menu a.portfolio {
+  flex-grow: 1;
+  background: rgba(0, 0, 0, 0.33);
+  text-align: center;
+  padding: 15px;
+  color: black;
+  text-decoration: none;
+  border-radius: 15px;
+  color: #fff;
+}
+.menu a:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+.menu .xp {
+  width: 50px;
 }
 
 .timeline {
@@ -170,7 +239,7 @@ a {
   border-radius: 50%;
   display: inline-block;
   flex-shrink: 0;
-  margin: 0.625em 0;
+  margin: 0.625em 25px;
   margin-inline-end: 1em;
   position: relative;
   width: 0.75em;
@@ -197,7 +266,7 @@ a {
   display: block;
   position: absolute;
   top: 1em;
-  left: 5px;
+  left: 30px;
   width: 2px;
   height: 100%;
   transform: translateX(-50%);
