@@ -29,22 +29,29 @@ a {
   border-radius: 15px;
   margin-bottom: 20px;
   padding: 0 5px;
+  position: relative;
 }
-.header a {
+.header .profile {
+  width: 28px;
+  vertical-align: middle;
+  border-radius: 10px;
+  margin-right: 3px;
+  border: solid 3px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 6px;
+  left: 7px;
+}
+.header .links {
+  padding-left: 35px;
+}
+.header .links a {
   color: #fff;
   font-weight: 600;
   padding: 15px 10px;
   display: inline-block;
 }
-.header a.active {
+.header .links a.active {
   color: #4edbec;
-}
-.header a .profile {
-  width: 28px;
-  vertical-align: middle;
-  border-radius: 100%;
-  margin-right: 3px;
-  border: solid 3px rgba(78, 219, 236, 0.2117647059);
 }
 
 .content {
@@ -232,7 +239,7 @@ a {
   border-radius: 50%;
   display: inline-block;
   flex-shrink: 0;
-  margin: 0.625em 25px;
+  margin: 0.625em 17px;
   margin-inline-end: 1em;
   position: relative;
   width: 0.75em;
@@ -259,7 +266,7 @@ a {
   display: block;
   position: absolute;
   top: 1em;
-  left: 30px;
+  left: 23px;
   width: 2px;
   height: 100%;
   transform: translateX(-50%);
