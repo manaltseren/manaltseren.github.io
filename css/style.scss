@@ -87,7 +87,7 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -55%);
 
     .main-card {
         padding: 30px;
@@ -280,6 +280,7 @@ a {
 	position: relative;
 	width: 0.75em;
 	height: 0.75em;
+    top: 30px;
     box-shadow: 0 0 5px #4edbec;
     @include transition(all);
 
