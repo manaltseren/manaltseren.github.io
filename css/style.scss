@@ -38,8 +38,6 @@ a {
 }
 
 .header {
-    background:rgba(25, 25, 31, 0.7882352941);
-    border-radius: 15px;
     margin-bottom: 20px;
     padding: 0 5px;
     position: relative;
@@ -56,7 +54,7 @@ a {
     }
 
     .links {
-        padding-left: 35px;
+        text-align: center;
         a {
             color: #fff;
             font-weight: 600;
@@ -304,7 +302,7 @@ a {
 	content: "";
 	display: block;
 	position: absolute;
-	top: 1em;
+	top: 3em;
     left: 23px;
 	width: 2px;
 	height: 100%;
@@ -345,6 +343,16 @@ a {
     border-radius: 15px;
     box-shadow: 1px 1px 20px #00000021;
     color: #ffffffc2;
+    @include transition(all);
+
+    &:hover {
+
+        background:rgb(25 25 31 / 94%);
+
+        .timeline__image img {
+            box-shadow: 0 0 10px #e924ff;
+        }
+    }
 }
 
 .timeline__content {
@@ -358,6 +366,7 @@ a {
     img {
         border-radius: 10px;
         margin-top: 10px;
+        @include transition(all);
     }
     
 }
