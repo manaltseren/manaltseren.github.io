@@ -55,13 +55,13 @@ a {
 }
 
 .content {
-  max-width: 320px;
+  max-width: 360px;
   width: 100%;
   margin: 20px auto;
 }
 
 .content-fixed {
-  max-width: 320px;
+  max-width: 360px;
   width: 100%;
   margin: 20px auto;
   position: absolute;
@@ -293,27 +293,42 @@ a {
 }
 
 .timeline__item-body-content {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
   color: rgba(255, 255, 255, 0.65);
   padding-top: 10px;
   list-style: 1.5;
-  background-color: hsl(var(--hue), 10%, 50%, 0.2);
   transition: opacity var(--trans-dur) var(--trans-timing), visibility var(--trans-dur) steps(1, end);
 }
 
 .timeline__meta {
   width: 100%;
-  padding: 20px 20px;
+  padding: 15px;
   background: rgba(25, 25, 31, 0.7882352941);
   border-radius: 15px;
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1294117647);
   color: rgba(255, 255, 255, 0.7607843137);
 }
 
+.timeline__content {
+  display: flex;
+  gap: 10px;
+}
+
+.timeline__image {
+  width: 64px;
+}
+.timeline__image img {
+  border-radius: 10px;
+}
+
 .timeline__title {
   font-size: 16px;
   font-weight: 600;
   line-height: 1.333;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   color: #4edbec;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
