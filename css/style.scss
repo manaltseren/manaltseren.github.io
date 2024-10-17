@@ -87,6 +87,7 @@ a {
     left: 50%;
     transform: translate(-50%, -55%);
 
+
     .main-card {
         padding: 30px;
         background: #19191fc9;
@@ -94,6 +95,7 @@ a {
         box-shadow: 1px 1px 20px #00000021;
         margin-bottom: 10px;
         text-align: center;
+        box-shadow: 0 4px 10px rgba(9, 9, 9, 0.431372549);
     }
 
     .avatar {
@@ -259,7 +261,7 @@ a {
 .stat {
     display: flex;
     gap:15px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 
     .profile {
         width: 80px;
@@ -294,8 +296,9 @@ a {
 
         div {
             flex-basis: 100%;
+            text-align: center;
             .skill {
-                text-align: center;
+                
                 background-color: #00000063;
                 cursor: pointer;
                 border-radius: 10px;
@@ -303,6 +306,8 @@ a {
                 border: solid 1px #000;
                 margin-bottom: 5px;
                 height: 30px;
+
+               
                 &.passive {
                    
                     border-color: transparent;
@@ -323,6 +328,13 @@ a {
                     background: #ffd000;
                 }
             }
+
+            span {
+                font-size: 9px;
+                display: block;
+                margin-top: 10px;
+                color: #ffffff8f;
+            }
         }
     }
 }
@@ -333,16 +345,34 @@ a {
     flex-grow: 1;
     gap: 6px;
     .item {
-        background-color: #00000052;
-        padding: 8px;
-        border-radius: 10px;
         flex-basis: 100%;
-        border: solid 1px #252525;
-        @include transition(all);
+        text-align: center;
+        cursor: pointer;
 
         &:hover {
-            background-color: #000;
+            .image {
+                background-color: #000;
+            }
+            span {
+                color: #fff;
+            }
         }
+
+        .image {
+            background-color: #00000052;
+            border-radius: 10px;
+            border: solid 1px #252525;
+            padding: 8px;
+            @include transition(all);
+        }
+
+        span {
+            color: #ffffff8f;
+            font-size: 9px;
+            @include transition(all);
+        }
+
+      
     }
 }
 
@@ -490,7 +520,7 @@ a {
 }
 
 .timeline__title {
-	font-size: 16px;
+	font-size: 14px;
     font-weight: 600;
 	line-height: 1.333;
     margin-bottom: 5px;
@@ -500,7 +530,7 @@ a {
 }
 
 .timeline__company {
-
+    font-size: 12px;
 }
 /* Expanded state */
 .timeline__item-body--expanded {

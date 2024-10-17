@@ -74,6 +74,7 @@ a {
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1294117647);
   margin-bottom: 10px;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(9, 9, 9, 0.431372549);
 }
 .content-fixed .avatar {
   width: 120px;
@@ -221,7 +222,7 @@ a {
 .stat {
   display: flex;
   gap: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .stat .profile {
   width: 80px;
@@ -254,9 +255,9 @@ a {
 }
 .stat .skills div {
   flex-basis: 100%;
+  text-align: center;
 }
 .stat .skills div .skill {
-  text-align: center;
   background-color: rgba(0, 0, 0, 0.3882352941);
   cursor: pointer;
   border-radius: 10px;
@@ -280,6 +281,12 @@ a {
   height: 2px;
   background: #ffd000;
 }
+.stat .skills div span {
+  font-size: 9px;
+  display: block;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.5607843137);
+}
 
 .item-slots {
   display: flex;
@@ -287,15 +294,27 @@ a {
   gap: 6px;
 }
 .item-slots .item {
-  background-color: rgba(0, 0, 0, 0.3215686275);
-  padding: 8px;
-  border-radius: 10px;
   flex-basis: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+.item-slots .item:hover .image {
+  background-color: #000;
+}
+.item-slots .item:hover span {
+  color: #fff;
+}
+.item-slots .item .image {
+  background-color: rgba(0, 0, 0, 0.3215686275);
+  border-radius: 10px;
   border: solid 1px #252525;
+  padding: 8px;
   transition: all 0.3s ease-in-out;
 }
-.item-slots .item:hover {
-  background-color: #000;
+.item-slots .item span {
+  color: rgba(255, 255, 255, 0.5607843137);
+  font-size: 9px;
+  transition: all 0.3s ease-in-out;
 }
 
 .timeline {
@@ -440,13 +459,17 @@ a {
 }
 
 .timeline__title {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.333;
   margin-bottom: 5px;
   color: #4edbec;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+
+.timeline__company {
+  font-size: 12px;
 }
 
 /* Expanded state */
