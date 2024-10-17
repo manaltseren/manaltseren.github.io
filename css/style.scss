@@ -450,7 +450,7 @@ a {
 }
 .timeline__item {
 	position: relative;
-	padding-bottom:20px;
+	padding-bottom:15px;
 
     &:hover {
         .timeline__title  {
@@ -532,7 +532,7 @@ a {
         border-radius: 10px;
         box-sizing: border-box;
         border: solid 3px rgba(255, 255, 255, 0.2);
-        margin-top: 10px;
+        margin-top: 5px;
         @include transition(all);
     }
     
