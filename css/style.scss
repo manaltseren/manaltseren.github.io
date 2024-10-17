@@ -228,6 +228,92 @@ a {
     }
 }
 
+.stat {
+    background: rgba(25, 25, 31, 0.7882352941);
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    gap:15px;
+
+    h1 {
+        margin: 0 0 10px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .profile {
+        width: 80px;
+        flex-shrink: 0;
+        
+
+      
+        
+        .image {
+            position: relative;
+            .lvl {
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                text-align: center;
+                line-height: 24px;
+                background: #000000;
+                border-radius: 100%;
+                font-weight: 600;
+                color: #4edbec;
+                border: solid 2px #4edbec;
+                bottom: -5px;
+                right: -5px;
+            }
+            img {
+                border-radius: 15px;
+            }
+        }
+       
+
+    }
+
+    .skills {
+        flex-grow: 1;
+        display: flex;
+        gap: 8px;
+
+        div {
+            flex-basis: 100%;
+            .skill {
+                text-align: center;
+                background-color: #00000063;
+                cursor: pointer;
+                border-radius: 10px;
+                padding: 8px;
+                border: solid 1px #000;
+                margin-bottom: 5px;
+                height: 30px;
+                &.passive {
+                   
+                    border-color: transparent;
+                }
+                // img {
+                //     width: calc( 100% - 4px );
+                // }
+            }
+            .level {
+                flex-grow: 1;
+                display: flex;
+                gap: 3px;
+                padding: 0 7px;
+                justify-content: center;
+                div {
+                    flex-basis: 20%;
+                    height:2px;
+                    background: #ffd000;
+                }
+            }
+        }
+    }
+}
+
 
 .timeline {
 	margin: auto;

@@ -191,6 +191,78 @@ a {
   width: 50px;
 }
 
+.stat {
+  background: rgba(25, 25, 31, 0.7882352941);
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 15px;
+}
+.stat h1 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.stat .profile {
+  width: 80px;
+  flex-shrink: 0;
+}
+.stat .profile .image {
+  position: relative;
+}
+.stat .profile .image .lvl {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  background: #000000;
+  border-radius: 100%;
+  font-weight: 600;
+  color: #4edbec;
+  border: solid 2px #4edbec;
+  bottom: -5px;
+  right: -5px;
+}
+.stat .profile .image img {
+  border-radius: 15px;
+}
+.stat .skills {
+  flex-grow: 1;
+  display: flex;
+  gap: 8px;
+}
+.stat .skills div {
+  flex-basis: 100%;
+}
+.stat .skills div .skill {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3882352941);
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 8px;
+  border: solid 1px #000;
+  margin-bottom: 5px;
+  height: 30px;
+}
+.stat .skills div .skill.passive {
+  border-color: transparent;
+}
+.stat .skills div .level {
+  flex-grow: 1;
+  display: flex;
+  gap: 3px;
+  padding: 0 7px;
+  justify-content: center;
+}
+.stat .skills div .level div {
+  flex-basis: 20%;
+  height: 2px;
+  background: #ffd000;
+}
+
 .timeline {
   margin: auto;
   width: 100%;
