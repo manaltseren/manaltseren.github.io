@@ -434,7 +434,7 @@ a {
     margin-bottom: 5px;
 }
 .timeline__dot {
-	background-color: #4edbec;
+	background-color: #b64bff;
 	border-radius: 50%;
 	display: inline-block;
 	flex-shrink: 0;
@@ -444,7 +444,7 @@ a {
 	width: 0.75em;
 	height: 0.75em;
     top: 30px;
-    box-shadow: 0 0 5px #4edbec;
+    box-shadow: 0 0 5px #b64bff;
     @include transition(all);
 
 }
@@ -454,11 +454,11 @@ a {
 
     &:hover {
         .timeline__title  {
-            color: #b64bff;
+            color: #4dd8e8;
         }
         .timeline__dot{
-            background-color: #b64bff;
-            box-shadow: 0 0 15px #b64bff;
+            background-color: #4edbec;
+            box-shadow: 0 0 15px #4edbec;
         }
     } 
 }
@@ -515,7 +515,7 @@ a {
         background:rgb(25 25 31 / 94%);
 
         .timeline__image img {
-            box-shadow: 0 0 10px #e924ff91;
+            border-color: #4dd8e8;
         }
     }
 }
@@ -526,10 +526,12 @@ a {
 }
 
 .timeline__image {
-    width: 40px;
-    
+    width: 48px;
+  
     img {
         border-radius: 10px;
+        box-sizing: border-box;
+        border: solid 3px rgba(255, 255, 255, 0.2);
         margin-top: 10px;
         @include transition(all);
     }
@@ -541,7 +543,7 @@ a {
     font-weight: 600;
 	line-height: 1.333;
     margin-bottom: 5px;
-    color: #4edbec;
+    color: #fff;
     cursor: pointer;
     @include transition(all);
 }
@@ -582,7 +584,7 @@ a {
          
             .info {
                 .title {
-                    color: #b64bff;
+                
                     &:after {
                         width: 30px;
                     }
@@ -590,7 +592,7 @@ a {
             }
 
             .image img {
-                border-color: #b64bff;
+                border-color: #4dd8e8;
             }
         }
 
@@ -611,7 +613,6 @@ a {
             line-height: 1.5;
             .title {
                 font-size: 14px;
-                
                 font-weight: 600;
                 color: #fff;
                 margin-bottom: 15px;
