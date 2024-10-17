@@ -228,28 +228,42 @@ a {
     }
 }
 
-.stat {
+.xp-container {
     background: rgba(25, 25, 31, 0.7882352941);
     padding: 15px;
     border-radius: 15px;
     margin-bottom: 30px;
+    box-shadow: 0 4px 10px #0909096e;
+
+    .title {
+        color: #4dd8e8;
+        font-size: 12px;
+        font-weight: 600;
+        background: #00000038;
+        padding: 5px 10px 5px 25px;
+        border-radius: 5px;
+        margin: 0 0 8px;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 11px;
+            left: 10px;
+            width: 5px;
+            height: 2px;
+            background: #4dd8e8;
+        }
+    }
+}
+
+.stat {
     display: flex;
     gap:15px;
-
-    h1 {
-        margin: 0 0 10px;
-        color: #fff;
-        font-size: 16px;
-        font-weight: 500;
-    }
+    margin-bottom: 30px;
 
     .profile {
         width: 80px;
         flex-shrink: 0;
-        
-
-      
-        
         .image {
             position: relative;
             .lvl {
@@ -261,16 +275,15 @@ a {
                 background: #000000;
                 border-radius: 100%;
                 font-weight: 600;
-                color: #4edbec;
-                border: solid 2px #4edbec;
+                color: #ffd000;
+                border: solid 2px #ffd000;
                 bottom: -5px;
                 right: -5px;
             }
             img {
-                border-radius: 15px;
+                border-radius: 10px;
             }
         }
-       
 
     }
 
@@ -310,6 +323,25 @@ a {
                     background: #ffd000;
                 }
             }
+        }
+    }
+}
+
+.item-slots {
+
+    display: flex;
+    flex-grow: 1;
+    gap: 6px;
+    .item {
+        background-color: #00000052;
+        padding: 8px;
+        border-radius: 10px;
+        flex-basis: 100%;
+        border: solid 1px #252525;
+        @include transition(all);
+
+        &:hover {
+            background-color: #000;
         }
     }
 }
@@ -436,7 +468,7 @@ a {
         background:rgb(25 25 31 / 94%);
 
         .timeline__image img {
-            box-shadow: 0 0 10px #e924ff;
+            box-shadow: 0 0 10px #e924ff91;
         }
     }
 }
