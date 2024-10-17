@@ -247,8 +247,8 @@ a {
 }
 .stat .profile .image img {
   border-radius: 10px;
+  box-sizing: border-box;
   border: solid 3px rgba(255, 255, 255, 0.24);
-  width: calc(100% - 6px);
 }
 .stat .skills {
   flex-grow: 1;
@@ -504,7 +504,7 @@ a {
   background: rgba(25, 25, 31, 0.7882352941);
   padding: 15px;
   border-radius: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   box-shadow: 0 4px 10px rgba(9, 9, 9, 0.431372549);
   display: flex;
   gap: 15px;
@@ -516,10 +516,18 @@ a {
 }
 .portfolio .item:hover {
   background-color: rgba(25, 25, 31, 0.94);
-  left: -8px;
+}
+.portfolio .item:hover .info .title {
+  color: #b64bff;
+}
+.portfolio .item:hover .info .title:after {
+  width: 30px;
+}
+.portfolio .item:hover .image img {
+  border-color: #b64bff;
 }
 .portfolio .item .image {
-  width: 100px;
+  width: 80px;
   flex-shrink: 0;
   cursor: pointer;
 }
@@ -527,13 +535,14 @@ a {
   border-radius: 10px;
   border: solid 3px rgba(255, 255, 255, 0.24);
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 .portfolio .item .info {
   flex-grow: 1;
+  line-height: 1.5;
 }
 .portfolio .item .info .title {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 14px;
   font-weight: 600;
   color: #fff;
   margin-bottom: 15px;
@@ -544,9 +553,10 @@ a {
   position: absolute;
   top: calc(100% + 5px);
   left: 0;
-  width: 30px;
+  width: 15px;
   height: 2px;
   background-color: #4dd8e8;
+  transition: all 0.3s ease-in-out;
 }
 .portfolio .item .info .description {
   margin: 10px 0 5px;
